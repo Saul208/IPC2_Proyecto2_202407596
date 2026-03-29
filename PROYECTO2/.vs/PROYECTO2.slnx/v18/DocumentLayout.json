@@ -1,0 +1,190 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|c:\\users\\saul\\desktop\\ipc2_proyecto2_2026_1s\\proyecto2\\proyecto2\\models\\dron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|solutionrelative:proyecto2\\models\\dron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|c:\\users\\saul\\desktop\\ipc2_proyecto2_2026_1s\\proyecto2\\proyecto2\\models\\alturaletra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|solutionrelative:proyecto2\\models\\alturaletra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|c:\\users\\saul\\desktop\\ipc2_proyecto2_2026_1s\\proyecto2\\proyecto2\\models\\sistemadrones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|solutionrelative:proyecto2\\models\\sistemadrones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|c:\\users\\saul\\desktop\\ipc2_proyecto2_2026_1s\\proyecto2\\proyecto2\\models\\cantidaddrones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|solutionrelative:proyecto2\\models\\cantidaddrones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|c:\\users\\saul\\desktop\\ipc2_proyecto2_2026_1s\\proyecto2\\proyecto2\\models\\instruccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|solutionrelative:proyecto2\\models\\instruccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|c:\\users\\saul\\desktop\\ipc2_proyecto2_2026_1s\\proyecto2\\proyecto2\\models\\mensaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|solutionrelative:proyecto2\\models\\mensaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|c:\\users\\saul\\desktop\\ipc2_proyecto2_2026_1s\\proyecto2\\proyecto2\\proyecto2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|solutionrelative:proyecto2\\proyecto2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|c:\\users\\saul\\desktop\\ipc2_proyecto2_2026_1s\\proyecto2\\proyecto2\\estructuras\\nodo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|solutionrelative:proyecto2\\estructuras\\nodo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|c:\\users\\saul\\desktop\\ipc2_proyecto2_2026_1s\\proyecto2\\proyecto2\\estructuras\\listadinamica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|solutionrelative:proyecto2\\estructuras\\listadinamica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|c:\\users\\saul\\desktop\\ipc2_proyecto2_2026_1s\\proyecto2\\proyecto2\\services\\lectorxml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DF77260-85D3-4634-955B-C15E1DEFEE21}|PROYECTO2\\PROYECTO2.csproj|solutionrelative:proyecto2\\services\\lectorxml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LectorXML.cs",
+              "DocumentMoniker": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\Services\\LectorXML.cs",
+              "RelativeDocumentMoniker": "PROYECTO2\\Services\\LectorXML.cs",
+              "ToolTip": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\Services\\LectorXML.cs",
+              "RelativeToolTip": "PROYECTO2\\Services\\LectorXML.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T04:15:57.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ListaDinamica.cs",
+              "DocumentMoniker": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\Estructuras\\ListaDinamica.cs",
+              "RelativeDocumentMoniker": "PROYECTO2\\Estructuras\\ListaDinamica.cs",
+              "ToolTip": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\Estructuras\\ListaDinamica.cs",
+              "RelativeToolTip": "PROYECTO2\\Estructuras\\ListaDinamica.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAIwC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T04:10:12.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Nodo.cs",
+              "DocumentMoniker": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\Estructuras\\Nodo.cs",
+              "RelativeDocumentMoniker": "PROYECTO2\\Estructuras\\Nodo.cs",
+              "ToolTip": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\Estructuras\\Nodo.cs",
+              "RelativeToolTip": "PROYECTO2\\Estructuras\\Nodo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T04:09:52.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PROYECTO2",
+              "DocumentMoniker": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\PROYECTO2.csproj",
+              "RelativeDocumentMoniker": "PROYECTO2\\PROYECTO2.csproj",
+              "ToolTip": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\PROYECTO2.csproj",
+              "RelativeToolTip": "PROYECTO2\\PROYECTO2.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-29T04:09:03.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Mensaje.cs",
+              "DocumentMoniker": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\Models\\Mensaje.cs",
+              "RelativeDocumentMoniker": "PROYECTO2\\Models\\Mensaje.cs",
+              "ToolTip": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\Models\\Mensaje.cs",
+              "RelativeToolTip": "PROYECTO2\\Models\\Mensaje.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T04:01:56.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Instruccion.cs",
+              "DocumentMoniker": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\Models\\Instruccion.cs",
+              "RelativeDocumentMoniker": "PROYECTO2\\Models\\Instruccion.cs",
+              "ToolTip": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\Models\\Instruccion.cs",
+              "RelativeToolTip": "PROYECTO2\\Models\\Instruccion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T04:01:42.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CantidadDrones.cs",
+              "DocumentMoniker": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\Models\\CantidadDrones.cs",
+              "RelativeDocumentMoniker": "PROYECTO2\\Models\\CantidadDrones.cs",
+              "ToolTip": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\Models\\CantidadDrones.cs",
+              "RelativeToolTip": "PROYECTO2\\Models\\CantidadDrones.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T04:01:29.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SistemaDrones.cs",
+              "DocumentMoniker": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\Models\\SistemaDrones.cs",
+              "RelativeDocumentMoniker": "PROYECTO2\\Models\\SistemaDrones.cs",
+              "ToolTip": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\Models\\SistemaDrones.cs",
+              "RelativeToolTip": "PROYECTO2\\Models\\SistemaDrones.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T04:01:13.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AlturaLetra.cs",
+              "DocumentMoniker": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\Models\\AlturaLetra.cs",
+              "RelativeDocumentMoniker": "PROYECTO2\\Models\\AlturaLetra.cs",
+              "ToolTip": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\Models\\AlturaLetra.cs",
+              "RelativeToolTip": "PROYECTO2\\Models\\AlturaLetra.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T04:00:52.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dron.cs",
+              "DocumentMoniker": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\Models\\Dron.cs",
+              "RelativeDocumentMoniker": "PROYECTO2\\Models\\Dron.cs",
+              "ToolTip": "C:\\Users\\Saul\\Desktop\\IPC2_Proyecto2_2026_1S\\PROYECTO2\\PROYECTO2\\Models\\Dron.cs",
+              "RelativeToolTip": "PROYECTO2\\Models\\Dron.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T04:00:11.462Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
