@@ -1,23 +1,22 @@
-﻿using Proyecto2.Estructuras;
-using Proyecto2.Models;
-using PROYECTO2.Models;
-using System;
+﻿using System;
 using System.Xml;
+using PROYECTO2.Estructuras;
+using PROYECTO2.Models;
 
-namespace Proyecto2.Services
+namespace PROYECTO2.Services
 {
     public class LectorXML
     {
         // Listas globales que simulan tu "Base de Datos" temporal
-        public ListaEnlazada<Dron> DronesGlobales { get; private set; }
-        public ListaEnlazada<SistemaDrones> SistemasGlobales { get; private set; }
-        public ListaEnlazada<Mensaje> MensajesGlobales { get; private set; }
+        public ListaDinamica<Dron> DronesGlobales { get; private set; }
+        public ListaDinamica<SistemaDrones> SistemasGlobales { get; private set; }
+        public ListaDinamica<Mensaje> MensajesGlobales { get; private set; }
 
         public LectorXML()
         {
-            DronesGlobales = new ListaEnlazada<Dron>();
-            SistemasGlobales = new ListaEnlazada<SistemaDrones>();
-            MensajesGlobales = new ListaEnlazada<Mensaje>();
+            DronesGlobales = new ListaDinamica<Dron>();
+            SistemasGlobales = new ListaDinamica<SistemaDrones>();
+            MensajesGlobales = new ListaDinamica<Mensaje>();
         }
 
         public void CargarDesdeArchivo(string rutaArchivo)
@@ -26,7 +25,7 @@ namespace Proyecto2.Services
             doc.Load(rutaArchivo); // Carga el XML desde la ruta física
 
             // 1. Leer Drones
-            XmlNodeList nodosDron = doc.SelectNodes("//listaDrones/dron");
+            XmlNodeList? nodosDron = doc.SelectNodes("//listaDrones/dron");
             if (nodosDron != null)
             {
                 foreach (XmlNode nodo in nodosDron)
@@ -36,32 +35,47 @@ namespace Proyecto2.Services
             }
 
             // 2. Leer Sistemas de Drones
-            XmlNodeList nodosSistemas = doc.SelectNodes("//listaSistemasDrones/sistemaDrones");
+            XmlNodeList? nodosSistemas = doc.SelectNodes("//listaSistemasDrones/sistemaDrones");
             if (nodosSistemas != null)
             {
                 foreach (XmlNode nodoSistema in nodosSistemas)
                 {
                     SistemaDrones nuevoSistema = new SistemaDrones();
-                    nuevoSistema.Nombre = nodoSistema.Attributes["nombre"].Value;
-                    nuevoSistema.AlturaMaxima = int.Parse(nodoSistema["alturaMaxima"].InnerText);
-                    nuevoSistema.CantidadDrones = int.Parse(nodoSistema["cantidadDrones"].InnerText);
+
+                    if (nodoSistema.Attributes?["nombre"] != null)
+                        nuevoSistema.Nombre = nodoSistema.Attributes["nombre"]!.Value;
+
+                    if (nodoSistema["alturaMaxima"] != null)
+                        nuevoSistema.AlturaMaxima = int.Parse(nodoSistema["alturaMaxima"]!.InnerText);
+
+                    if (nodoSistema["cantidadDrones"] != null)
+                        nuevoSistema.CantidadDrones = int.Parse(nodoSistema["cantidadDrones"]!.InnerText);
 
                     // Drones del sistema
-                    XmlNodeList dronesSistema = nodoSistema.SelectNodes("contenido/dron");
-                    foreach (XmlNode d in dronesSistema)
+                    XmlNodeList? dronesSistema = nodoSistema.SelectNodes("contenido/dron");
+                    if (dronesSistema != null)
                     {
-                        nuevoSistema.Drones.Agregar(new Dron { Nombre = d.InnerText.Trim() });
+                        foreach (XmlNode d in dronesSistema)
+                        {
+                            nuevoSistema.Drones.Agregar(new Dron { Nombre = d.InnerText.Trim() });
+                        }
                     }
 
                     // Alturas del sistema
-                    XmlNodeList alturasSistema = nodoSistema.SelectNodes("contenido/alturas/altura");
-                    foreach (XmlNode a in alturasSistema)
+                    XmlNodeList? alturasSistema = nodoSistema.SelectNodes("contenido/alturas/altura");
+                    if (alturasSistema != null)
                     {
-                        nuevoSistema.Alturas.Agregar(new AlturaLetra
+                        foreach (XmlNode a in alturasSistema)
                         {
-                            Valor = int.Parse(a.Attributes["valor"].Value),
-                            Letra = a.InnerText.Trim()
-                        });
+                            if (a.Attributes?["valor"] != null)
+                            {
+                                nuevoSistema.Alturas.Agregar(new AlturaLetra
+                                {
+                                    Valor = int.Parse(a.Attributes["valor"]!.Value),
+                                    Letra = a.InnerText.Trim()
+                                });
+                            }
+                        }
                     }
 
                     SistemasGlobales.Agregar(nuevoSistema);
@@ -69,23 +83,33 @@ namespace Proyecto2.Services
             }
 
             // 3. Leer Mensajes
-            XmlNodeList nodosMensajes = doc.SelectNodes("//listaMensajes/Mensaje");
+            XmlNodeList? nodosMensajes = doc.SelectNodes("//listaMensajes/Mensaje");
             if (nodosMensajes != null)
             {
                 foreach (XmlNode nodoMensaje in nodosMensajes)
                 {
                     Mensaje nuevoMensaje = new Mensaje();
-                    nuevoMensaje.Nombre = nodoMensaje.Attributes["nombre"].Value;
-                    nuevoMensaje.NombreSistemaDrones = nodoMensaje["sistemaDrones"].InnerText.Trim();
 
-                    XmlNodeList instrucciones = nodoMensaje.SelectNodes("instrucciones/instruccion");
-                    foreach (XmlNode inst in instrucciones)
+                    if (nodoMensaje.Attributes?["nombre"] != null)
+                        nuevoMensaje.Nombre = nodoMensaje.Attributes["nombre"]!.Value;
+
+                    if (nodoMensaje["sistemaDrones"] != null)
+                        nuevoMensaje.NombreSistemaDrones = nodoMensaje["sistemaDrones"]!.InnerText.Trim();
+
+                    XmlNodeList? instrucciones = nodoMensaje.SelectNodes("instrucciones/instruccion");
+                    if (instrucciones != null)
                     {
-                        nuevoMensaje.Instrucciones.Agregar(new Instruccion
+                        foreach (XmlNode inst in instrucciones)
                         {
-                            NombreDron = inst.Attributes["dron"].Value,
-                            ValorAltura = int.Parse(inst.InnerText.Trim())
-                        });
+                            if (inst.Attributes?["dron"] != null)
+                            {
+                                nuevoMensaje.Instrucciones.Agregar(new Instruccion
+                                {
+                                    NombreDron = inst.Attributes["dron"]!.Value,
+                                    ValorAltura = int.Parse(inst.InnerText.Trim())
+                                });
+                            }
+                        }
                     }
 
                     MensajesGlobales.Agregar(nuevoMensaje);

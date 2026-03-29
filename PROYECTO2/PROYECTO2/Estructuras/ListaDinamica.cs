@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace Proyecto2.Estructuras
+namespace PROYECTO2.Estructuras
 {
-    public class ListaEnlazada<T>
+    public class ListaDinamica<T>
     {
-        public Nodo<T> Cabeza { get; private set; }
+        public Nodo<T>? Cabeza { get; private set; }
         public int Tamaño { get; private set; }
 
-        public ListaEnlazada()
+        public ListaDinamica()
         {
             Cabeza = null;
             Tamaño = 0;
@@ -37,10 +37,10 @@ namespace Proyecto2.Estructuras
             if (indice < 0 || indice >= Tamaño)
                 throw new IndexOutOfRangeException("Índice fuera de rango.");
 
-            Nodo<T> actual = Cabeza;
+            Nodo<T> actual = Cabeza!;
             for (int i = 0; i < indice; i++)
             {
-                actual = actual.Siguiente;
+                actual = actual.Siguiente!;
             }
             return actual.Valor;
         }

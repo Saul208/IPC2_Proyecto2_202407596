@@ -2,7 +2,7 @@
 {
     public class Instruccion
     {
-        public string NombreDron { get; set; }
+        public string NombreDron { get; set; } = string.Empty;
         public int ValorAltura { get; set; }
     }
 }
