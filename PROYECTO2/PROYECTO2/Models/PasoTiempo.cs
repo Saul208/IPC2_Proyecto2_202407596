@@ -6,11 +6,6 @@ namespace PROYECTO2.Models
     public class PasoTiempo
     {
         public int Tiempo { get; set; }
-        public ListaDinamica<AccionDron> Acciones { get; set; }
-
-        public PasoTiempo()
-        {
-            Acciones = new ListaDinamica<AccionDron>();
-        }
+        public ListaAccionDron Acciones { get; set; } = new ListaAccionDron();
     }
 }

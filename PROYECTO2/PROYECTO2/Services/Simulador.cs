@@ -14,7 +14,7 @@ namespace PROYECTO2.Services
                 TiempoOptimo = 0
             };
 
-            ListaDinamica<EstadoDron> estados = new ListaDinamica<EstadoDron>();
+            ListaEstadoDron estados = new ListaEstadoDron();
             for (int i = 0; i < sistema.Drones.Tamaño; i++)
             {
                 estados.Agregar(new EstadoDron
@@ -92,7 +92,7 @@ namespace PROYECTO2.Services
             return resultado;
         }
 
-        private int BuscarSiguienteAltura(ListaDinamica<Instruccion> instrucciones, int indexInicio, string nombreDron)
+        private int BuscarSiguienteAltura(ListaInstruccion instrucciones, int indexInicio, string nombreDron)
         {
             for (int i = indexInicio; i < instrucciones.Tamaño; i++)
             {
@@ -104,7 +104,7 @@ namespace PROYECTO2.Services
             return -1;
         }
 
-        private string DecodificarMensaje(ListaDinamica<Instruccion> instrucciones, SistemaDrones sistema)
+        private string DecodificarMensaje(ListaInstruccion instrucciones, SistemaDrones sistema)
         {
             string mensajeFinal = "";
 

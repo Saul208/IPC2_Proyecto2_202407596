@@ -7,13 +7,7 @@ namespace PROYECTO2.Models
         public string Nombre { get; set; } = string.Empty;
         public int AlturaMaxima { get; set; }
         public int CantidadDrones { get; set; }
-        public ListaDinamica<Dron> Drones { get; set; }
-        public ListaDinamica<AlturaLetra> Alturas { get; set; }
-
-        public SistemaDrones()
-        {
-            Drones = new ListaDinamica<Dron>();
-            Alturas = new ListaDinamica<AlturaLetra>();
-        }
+        public ListaDron Drones { get; set; } = new ListaDron();
+        public ListaAlturaLetra Alturas { get; set; } = new ListaAlturaLetra();
     }
 }

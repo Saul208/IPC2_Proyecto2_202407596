@@ -6,11 +6,6 @@ namespace PROYECTO2.Models
     {
         public string Nombre { get; set; } = string.Empty;
         public string NombreSistemaDrones { get; set; } = string.Empty;
-        public ListaDinamica<Instruccion> Instrucciones { get; set; }
-
-        public Mensaje()
-        {
-            Instrucciones = new ListaDinamica<Instruccion>();
-        }
+        public ListaInstruccion Instrucciones { get; set; } = new ListaInstruccion();
     }
 }

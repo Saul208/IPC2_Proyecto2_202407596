@@ -8,9 +8,9 @@ namespace PROYECTO2.Services
     public class LectorXML
     {
         // Listas globales que simulan tu "Base de Datos" temporal
-        public ListaDinamica<Dron> DronesGlobales { get; private set; }
-        public ListaDinamica<SistemaDrones> SistemasGlobales { get; private set; }
-        public ListaDinamica<Mensaje> MensajesGlobales { get; private set; }
+        public ListaDron DronesGlobales { get; private set; } = new ListaDron();
+        public ListaSistemaDrones SistemasGlobales { get; private set; } = new ListaSistemaDrones();
+        public ListaMensaje MensajesGlobales { get; private set; } = new ListaMensaje();
 
         public LectorXML()
         {

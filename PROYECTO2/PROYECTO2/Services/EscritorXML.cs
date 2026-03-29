@@ -6,7 +6,7 @@ namespace PROYECTO2.Services
 {
     public class EscritorXML
     {
-        public void GenerarSalida(ListaDinamica<ResultadoMensaje> resultados, string rutaDestino)
+        public void GenerarSalida(ListaResultadoMensaje resultados, string rutaDestino)
         {
             XmlDocument doc = new XmlDocument();
 
