@@ -2,7 +2,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-
+builder.Services.AddSingleton<PROYECTO2.Services.DatosGlobales>();
+builder.Services.AddTransient<PROYECTO2.Services.ServicioGraphviz>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

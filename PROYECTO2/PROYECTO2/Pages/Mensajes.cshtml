@@ -1,0 +1,107 @@
+﻿@page
+@model PROYECTO2.Pages.MensajesModel
+@{
+    ViewData["Title"] = "Gestión de Mensajes";
+}
+
+<div class="container-fluid mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
+        <h2>Simulación y Envío de Mensajes</h2>
+        
+        <form method="post" asp-page-handler="DescargarXML">
+            <button type="submit" class="btn btn-warning fw-bold shadow-sm p-3">
+                <i class="bi bi-download me-2"></i>Descargar Archivo de Salida (Salida.xml)
+            </button>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-sm border-dark">
+                <div class="card-header bg-dark text-white py-3">
+                    <h5 class="mb-0"><i class="bi bi-envelope-paper-fill me-2 text-success"></i>Mensajes Cargados</h5>
+                </div>
+                <div class="list-group list-group-flush" style="max-height: 600px; overflow-y: auto;">
+                    @if (Model.ListaMensajesUI.Count == 0)
+                    {
+                        <div class="list-group-item text-muted text-center py-4">
+                            <i class="bi bi-envelope-slash fs-1 d-block mb-2"></i>
+                            No hay mensajes cargados.
+                        </div>
+                    }
+                    else
+                    {
+                        foreach (var msj in Model.ListaMensajesUI)
+                        {
+                            bool activo = Model.ResultadoActual?.NombreMensaje == msj.Nombre;
+                            <a asp-page="/Mensajes" asp-route-nombreMensajeSeleccionado="@msj.Nombre"
+                                   class="list-group-item list-group-item-action @(activo ? "active bg-primary text-white" : "")">
+                                <i class="bi bi-chat-left-dots-fill me-2 @(activo ? "text-white" : "text-success")"></i> @msj.Nombre
+                            </a>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9 mb-4">
+            @if (Model.ResultadoActual == null)
+            {
+                <div class="alert alert-secondary text-center py-5 shadow-sm mt-5">
+                    <i class="bi bi-chat-square-dots-fill fs-1 d-block mb-3 text-muted"></i>
+                    <h5>Selecciona un mensaje de la lista lateral para simular su envío y ver los resultados detallados.</h5>
+                </div>
+            }
+            else
+            {
+                <div class="card shadow-sm mb-4 border-success">
+                    <div class="card-header bg-success text-white py-3">
+                        <h5 class="mb-0 fs-6 fw-bold">Resultados de la Simulación Óptima: @Model.ResultadoActual.NombreMensaje</h5>
+                    </div>
+                    <div class="card-body bg-light">
+                        <div class="row text-center align-items-center">
+                            <div class="col-md-3 mb-3 mb-md-0 border-end">
+                                <div class="text-muted small mb-1">SISTEMA UTILIZADO</div>
+                                <div class="fs-5 fw-bold text-dark">
+                                    <i class="bi bi-diagram-3-fill text-success me-1"></i> @Model.ResultadoActual.SistemaDrones
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3 mb-md-0 border-end">
+                                <div class="text-muted small mb-1">TIEMPO ÓPTIMO</div>
+                                <div class="fs-1 fw-bold text-primary">
+                                    <i class="bi bi-stopwatch-fill me-1"></i> @Model.ResultadoActual.TiempoOptimo
+                                    <span class="fs-6 text-muted">seg</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-muted small mb-1">MENSAJE DECODIFICADO (TEXTO RECIBIDO)</div>
+                                <div class="alert alert-success border-success bg-white d-inline-block py-2 px-4 fs-3 fw-bold text-success shadow-sm mb-0 mt-1">
+                                    <i class="bi bi-quote me-2 fs-5"></i>@Model.ResultadoActual.MensajeRecibido<i class="bi bi-quote ms-2 fs-5"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm border-dark">
+                    <div class="card-header bg-dark text-white py-3 d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0 fs-6"><i class="bi bi-list-columns-reverse me-2 text-success"></i>Tabla de Instrucciones Paso a Paso (Graphviz)</h5>
+                        <small class="text-muted">Tiempo vs. Drones</small>
+                    </div>
+                    <div class="card-body text-center bg-dark p-2">
+                        @if (Model.RutaImagenInstrucciones == "ERROR_GRAPHVIZ")
+                        {
+                            <div class="alert alert-danger m-4">Graphviz no está configurado en el PATH del servidor.</div>
+                        }
+                        else
+                        {
+                            <div class="p-2 border border-secondary rounded bg-dark" style="overflow-x: auto;">
+                                <img src="@Model.RutaImagenInstrucciones" alt="Instrucciones Graphviz" class="img-fluid rounded shadow" style="max-height: 800px;" />
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

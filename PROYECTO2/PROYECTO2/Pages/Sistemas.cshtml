@@ -1,0 +1,83 @@
+﻿@page
+@model PROYECTO2.Pages.SistemasModel
+@{
+    ViewData["Title"] = "Gestión de Sistemas";
+}
+
+<div class="container-fluid mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
+        <h2>Panel de Control: Sistemas de Drones Configurados</h2>
+        <span class="badge bg-dark rounded-pill p-3 fs-6">
+            <i class="bi bi-diagram-3-fill me-1 text-success"></i> Sistemas: <strong>@Model.ListaSistemasUI.Count</strong>
+        </span>
+    </div>
+
+    @if (Model.ListaSistemasUI.Count == 0)
+    {
+        <div class="alert alert-warning text-center shadow-sm py-5 mt-5">
+            <i class="bi bi-cloud-slash fs-1 d-block mb-3"></i>
+            <h5>Aún no hay sistemas cargados en la base de datos temporal.</h5>
+            Por favor, dirígete a la pestaña <strong><a asp-page="/CargarXML">Cargar XML</a></strong> y sube el archivo de entrada.
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var item in Model.ListaSistemasUI)
+            {
+                string collapseId = $"collapseGrafico_{item.Sistema.Nombre.Replace(" ", "_")}";
+
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm border-dark h-100">
+                        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center py-3">
+                            <h5 class="mb-0 text-success fw-bold">
+                                <i class="bi bi-gear-fill me-2"></i>@item.Sistema.Nombre
+                            </h5>
+                            
+                            <button class="btn btn-outline-success btn-sm fw-bold" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#@collapseId" aria-expanded="false" aria-controls="@collapseId">
+                                <i class="bi bi-matrix me-1"></i> Ver Estructura (Matrix)
+                            </button>
+                        </div>
+                        
+                        <div class="card-body bg-light">
+                            <div class="row text-center mb-3">
+                                <div class="col-6 border-end">
+                                    <div class="text-muted small mb-1">ALTURA MÁXIMA</div>
+                                    <div class="fs-4 fw-bold text-dark">
+                                        <i class="bi bi-arrow-up-circle-fill text-success me-1"></i> @item.Sistema.AlturaMaxima <small class="text-muted fs-6">mts</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-muted small mb-1">CANTIDAD DRONES</div>
+                                    <div class="fs-4 fw-bold text-dark">
+                                        <i class="bi bi-robot text-success me-1"></i> @item.Sistema.CantidadDrones
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <hr class="text-muted mb-4" />
+
+                            <div class="collapse mt-3" id="@collapseId">
+                                <div class="card card-body p-1 bg-dark text-center border-success rounded">
+                                    @if (item.RutaImagen == "ERROR_GRAPHVIZ")
+                                    {
+                                        <div class="alert alert-danger m-3">
+                                            Graphviz no está configurado en el PATH del servidor.
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <h6 class="text-muted text-start ps-3 pt-2">Estructura Gráfica (Graphviz - Matrix Style)</h6>
+                                        <img src="@item.RutaImagen?v=@DateTime.Now.Ticks" alt="Gráfico del sistema @item.Sistema.Nombre" 
+                                        class="img-fluid border border-success rounded shadow-sm m-2" style="max-height: 500px;" />
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

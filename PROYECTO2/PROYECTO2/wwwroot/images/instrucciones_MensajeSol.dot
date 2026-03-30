@@ -1,0 +1,63 @@
+digraph G {
+  bgcolor="white";
+  node [shape=none, margin=0, fontcolor="black", fontname="Arial"];
+  tabla [label=<
+    <table border="1" color="#00BFFF" cellborder="1" cellspacing="0" cellpadding="10">
+      <tr><td colspan="4" bgcolor="#005f8a"><font color="white"><b>Instrucciones Óptimas: MensajeSol</b></font></td></tr>
+      <tr>
+        <td bgcolor="#4682B4"><font color="white"><b>Tiempo (seg)</b></font></td>
+        <td bgcolor="#4682B4"><font color="white"><b>Alpha</b></font></td>
+        <td bgcolor="#4682B4"><font color="white"><b>Beta</b></font></td>
+        <td bgcolor="#4682B4"><font color="white"><b>Gamma</b></font></td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><font color="#008000">Subir</font></td>
+        <td><font color="#008000">Subir</font></td>
+        <td><font color="#008000">Subir</font></td>
+      </tr>
+      <tr bgcolor="#F0F8FF">
+        <td>2</td>
+        <td><font color="#008000">Subir</font></td>
+        <td><font color="#008000">Subir</font></td>
+        <td><font color="#008000">Subir</font></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><font color="#008000">Subir</font></td>
+        <td><font color="#008000">Subir</font></td>
+        <td><font color="#008000">Subir</font></td>
+      </tr>
+      <tr bgcolor="#F0F8FF">
+        <td>4</td>
+        <td><font color="#008000">Subir</font></td>
+        <td><font color="#008000">Subir</font></td>
+        <td><font color="#008000">Subir</font></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><font color="#008000">Subir</font></td>
+        <td><font color="#008000">Subir</font></td>
+        <td><font color="#008000">Subir</font></td>
+      </tr>
+      <tr bgcolor="#F0F8FF">
+        <td>6</td>
+        <td><font color="#B8860B">Emitir luz</font></td>
+        <td><font color="#A9A9A9">Esperar</font></td>
+        <td><font color="#A9A9A9">Esperar</font></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><font color="#A9A9A9">Esperar</font></td>
+        <td><font color="#B8860B">Emitir luz</font></td>
+        <td><font color="#A9A9A9">Esperar</font></td>
+      </tr>
+      <tr bgcolor="#F0F8FF">
+        <td>8</td>
+        <td><font color="#A9A9A9">Esperar</font></td>
+        <td><font color="#A9A9A9">Esperar</font></td>
+        <td><font color="#B8860B">Emitir luz</font></td>
+      </tr>
+    </table>
+  >];
+}

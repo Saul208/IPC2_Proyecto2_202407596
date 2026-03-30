@@ -1,0 +1,42 @@
+﻿@page
+@model PROYECTO2.Pages.CargarXMLModel
+@{
+    ViewData["Title"] = "Cargar XML";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Cargar Archivo de Entrada</h2>
+    <hr />
+
+    @if (!string.IsNullOrEmpty(Model.Mensaje))
+    {
+        <div class="alert alert-info alert-dismissible fade show shadow-sm" role="alert">
+            @Model.Mensaje
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Seleccione su archivo entrada.xml</h5>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted">
+                        Puede cargar múltiples archivos. El sistema leerá la información y la agregará a los drones, sistemas y mensajes existentes (carga incremental).
+                    </p>
+                    
+                    <form method="post" enctype="multipart/form-data" asp-page-handler="Cargar">
+                        <div class="mb-4">
+                            <input class="form-control form-control-lg" type="file" asp-for="ArchivoXML" accept=".xml" required>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100 py-2 fw-bold">
+                                Procesar Archivo XML
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

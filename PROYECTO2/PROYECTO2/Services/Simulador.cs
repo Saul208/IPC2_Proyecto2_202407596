@@ -117,7 +117,8 @@ namespace PROYECTO2.Services
                 {
                     AlturaLetra al = sistema.Alturas.Obtener(j);
 
-                    if (al.Valor == inst.ValorAltura)
+                    // Ahora validamos que coincida la altura Y el dron
+                    if (al.Valor == inst.ValorAltura && al.NombreDron == inst.NombreDron)
                     {
                         mensajeFinal += al.Letra;
                         letraEncontrada = true;
@@ -130,7 +131,6 @@ namespace PROYECTO2.Services
                     mensajeFinal += " ";
                 }
             }
-
             return mensajeFinal;
         }
     }

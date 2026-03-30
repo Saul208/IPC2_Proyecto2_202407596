@@ -96,3 +96,4 @@ C:\Users\Saul\Desktop\IPC2_Proyecto2_2026_1S\PROYECTO2\PROYECTO2\obj\Debug\net10
 C:\Users\Saul\Desktop\IPC2_Proyecto2_2026_1S\PROYECTO2\PROYECTO2\obj\Debug\net10.0\PROYECTO2.pdb
 C:\Users\Saul\Desktop\IPC2_Proyecto2_2026_1S\PROYECTO2\PROYECTO2\obj\Debug\net10.0\PROYECTO2.genruntimeconfig.cache
 C:\Users\Saul\Desktop\IPC2_Proyecto2_2026_1S\PROYECTO2\PROYECTO2\obj\Debug\net10.0\ref\PROYECTO2.dll
+C:\Users\Saul\Desktop\IPC2_Proyecto2_2026_1S\PROYECTO2\PROYECTO2\obj\Debug\net10.0\PROYECTO2.sourcelink.json
