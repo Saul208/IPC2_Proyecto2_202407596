@@ -1,5 +1,12 @@
 wwwroot\css\site.css
+wwwroot\Documentacion\Ensayo_Proyecto2.pdf
 wwwroot\favicon.ico
+wwwroot\images\instrucciones_MensajeAnima.dot
+wwwroot\images\instrucciones_MensajeAnima.png
+wwwroot\images\instrucciones_MensajeSol.dot
+wwwroot\images\instrucciones_MensajeSol.png
+wwwroot\images\sistema_SistemaFacil.dot
+wwwroot\images\sistema_SistemaFacil.png
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -61,12 +68,6 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\images\instrucciones_MensajeAnima.dot
-wwwroot\images\instrucciones_MensajeAnima.png
-wwwroot\images\instrucciones_MensajeSol.dot
-wwwroot\images\instrucciones_MensajeSol.png
-wwwroot\images\sistema_SistemaFacil.dot
-wwwroot\images\sistema_SistemaFacil.png
 C:\Users\Saul\Desktop\IPC2_Proyecto2_2026_1S\PROYECTO2\PROYECTO2\wwwroot\css\site.css
 C:\Users\Saul\Desktop\IPC2_Proyecto2_2026_1S\PROYECTO2\PROYECTO2\wwwroot\favicon.ico
 C:\Users\Saul\Desktop\IPC2_Proyecto2_2026_1S\PROYECTO2\PROYECTO2\wwwroot\js\site.js

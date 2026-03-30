@@ -1,0 +1,37 @@
+﻿@page
+@model PROYECTO2.Pages.AyudaModel
+@{
+    ViewData["Title"] = "Ayuda y Documentación";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow border-info">
+                <div class="card-header bg-info text-white text-center py-3">
+                    <h4 class="mb-0"><i class="bi bi-info-circle-fill me-2"></i>Información de Ayuda</h4>
+                </div>
+                <div class="card-body bg-light text-center py-5">
+                    <i class="bi bi-person-badge fs-1 text-primary mb-3"></i>
+                    <h2 class="fw-bold text-dark">Jefferson Saul Ajcuc Sambrano</h2>
+                    <h4 class="text-muted mt-2">202407596</h4>
+                    <h5 class="text-muted mt-2">Estudiante de Ingeniería en Ciencias y Sistemas</h5>
+                    <h6 class="text-muted mb-4">Universidad de San Carlos de Guatemala (USAC)</h6>
+
+                    <hr class="w-50 mx-auto my-4 border-secondary">
+
+                    <h5 class="mb-3 fw-bold text-dark">Documentación Técnica</h5>
+                    <p class="text-muted mb-4">Haz clic en el siguiente botón para visualizar el ensayo y los diagramas oficiales del proyecto.</p>
+                    
+                    <a href="/Documentacion/Ensayo_Proyecto2.pdf" target="_blank" class="btn btn-primary btn-lg shadow-sm px-4 rounded-pill">
+                        <i class="bi bi-file-earmark-pdf-fill me-2"></i>Ver Documentación del Proyecto
+                    </a>
+                    
+                    <div class="alert alert-light border mt-4 text-start small text-muted">
+                        <i class="bi bi-lightbulb-fill text-warning me-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

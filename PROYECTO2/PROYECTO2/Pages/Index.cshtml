@@ -1,10 +1,31 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center mt-5 pt-5">
+    <h1 class="display-3 fw-bold text-success mb-3"><i class="bi bi-cpu-fill"></i> Drone Comms System</h1>
+    <p class="lead text-muted mb-5">Plataforma de simulación y decodificación de mensajes encriptados mediante sistemas de drones.</p>
+    
+    <div class="card shadow-sm border-danger mx-auto" style="max-width: 500px;">
+        <div class="card-body p-4">
+            <h5 class="card-title text-danger fw-bold mb-3"><i class="bi bi-exclamation-triangle-fill me-2"></i>Inicialización del Sistema</h5>
+            <p class="text-muted small mb-4">Esta acción borrará todos los drones, sistemas y mensajes cargados en la memoria temporal para empezar desde cero.</p>
+            
+            <form method="post" asp-page-handler="Inicializar">
+                <button type="submit" class="btn btn-danger btn-lg w-100 shadow-sm fw-bold"
+                        onclick="return confirm('¿Estás totalmente seguro de que deseas borrar toda la información e inicializar el sistema?');">
+                    <i class="bi bi-arrow-clockwise me-2"></i>Inicializar Sistema (Borrar Todo)
+                </button>
+            </form>
+
+            @if (!string.IsNullOrEmpty(Model.MensajeInicializacion))
+            {
+                <div class="alert alert-success mt-3 mb-0">
+                    <i class="bi bi-check-circle-fill me-2"></i>@Model.MensajeInicializacion
+                </div>
+            }
+        </div>
+    </div>
 </div>
